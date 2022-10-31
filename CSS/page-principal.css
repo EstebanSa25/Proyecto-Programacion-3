@@ -59,7 +59,7 @@ footer{
 .colegio-publico{
     color: rgba(0, 0, 0, 0.5);
     font:600 normal 1.5625rem 'Montserrat', sans-serif;
-    letter-spacing:.06rem ;
+    letter-spacing:7px ;
     /* padding-left: 3.125rem; */
 }
 
