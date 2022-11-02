@@ -1,0 +1,99 @@
+/* Responsive */
+@media (max-width:43.75rem){
+footer{
+    margin-top: 50px;
+}
+    *{
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+        text-decoration: none;
+    }
+    .header-menu a{
+        font:  bold normal 12px 'Montserrat', sans-serif;
+    }
+    .btn-login{
+        overflow-y: hidden;
+        font-size: 30px;
+    }
+    .txtIniciarsesion{
+        /* display: none; */
+        font-size: 0px;
+    }
+    .header-iniciar_sesion{
+    position: fixed;
+    margin-top: 100px;
+    justify-content: left;
+    width: 120px;
+    height: 40px;
+    margin-left: 280px;
+    overflow-y: hidden;
+    }
+    .header-iniciar_sesion a{
+        font-size: 0px;
+        line-height: 40px;
+    }
+    .logo-header{
+        display: none;
+    }
+    .colegio-publico{
+        font-size: 20px;
+    }
+    .txtSec1{
+        margin-left: 15px;
+    }
+    .txtSec1 h2,.txtSec1 p{
+        font-size: 30px;
+    }
+    .image1{
+    display: none;
+    }
+    .main-img_servicios{
+        justify-content: space-between;
+       }
+    .txt-info_servicios{
+        font-size: 20px;
+    }
+    .main-img_servicios{
+        flex-direction: column;
+       }
+   .img-ingles{
+    margin: 10px;
+   }
+   .main-infrestructura_img{
+    flex-direction: column;
+   }
+   .img-estructura{
+    width: 400px;
+   }
+   .estructura2{
+    margin-top: 30px;
+   }
+   .scroll-hidden{
+    overflow: hidden;
+   }
+   .txt-barra-educacion{
+    margin-top: 5px;
+    font-size: 32px;
+   }
+   .menu-footer{
+    font-size: 18px;
+   }
+   .footer-contacto{
+    flex-direction: column;
+    gap: 1px;
+   }
+   .menu-footer{
+    font-weight: 500;
+    font-size: 15px;
+   }
+   .txt-normal{
+    margin-bottom: 12px;
+   }
+[class*="btn-sec1"]{
+    font-size: 25px;
+}
+.btn-principal1{
+    width: 290px;
+}
+    }

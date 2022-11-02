@@ -25,6 +25,7 @@ footer{
 .footer-menu{
     display: flex;
     gap: 50px;
+    flex-direction: row;
     align-items: center;
     justify-content: center;
 }
@@ -234,32 +235,16 @@ margin-left: 25%;
     text-align: center;
 }
 
-
-
-
-
-
-
-/* Responsive */
-@media (max-width:43.75rem){
-.header-menu a{
-    font:  bold normal 12px 'Montserrat', sans-serif;
-    margin-right: 250px;
+.img-ingles{
+    background: url(ingles.jpg);
+    border-radius: 46px;
+    width: 344px;
+height: 232px;
 }
-.header-principal{
-    flex-direction: row;
-    text-align: center;
+.header-menu{
+    display: flex;
 }
-.header-iniciar_sesion{
-    width: 0px;
-    height: 0px;
+.btn-login{
+font-size: 0px;
 }
-.header-iniciar_sesion a{
-    text-align: center;
-    font-size: 0px;
-    line-height: 0px;
-}
-.logo-header{
-    width:0px
-}
-}
+
