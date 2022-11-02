@@ -1,0 +1,41 @@
+@media (max-width:43.75rem){
+    *{
+        overflow-x: hidden;
+    }
+.nombre-colegio{
+    font-size: 20px;
+}
+.logo{
+    width: 45px;
+}
+.sec1-principal{
+    width: 100%;
+    display: inline-block;
+}
+.registro{
+    width: 300px;
+}
+.img-seleccion{
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+.tipo-cuenta{
+    font-size: 20px;
+}
+.txt-barra-plataforma{
+    font-size: 12px;
+}
+.btn-seleccion{
+    display: none;
+}
+.img-padres{
+    margin-top: 30px;
+}
+.txt-barra-plataforma{
+    text-align: center;
+    font-size: 18px;
+}
+.txt-footer-centro{
+display: none;
+}
+}
