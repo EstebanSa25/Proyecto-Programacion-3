@@ -96,5 +96,73 @@ footer{
 .btn-principal1{
     width: 290px;
 }
+.header-menu div{
+    overflow: hidden;
+}
+    }
 
+
+
+
+
+    @media (max-width:900px){
+        *{
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            text-decoration: none;
+        }
+header{
+    width: 880px
+}
+footer{
+    margin-top: 90px;
+}
+.header-menu a{
+    font:  bold normal 20px 'Montserrat', sans-serif;
+}
+.header-menu a{
+    font:  bold normal 20px 'Montserrat', sans-serif;
+}
+.btn-login{
+    overflow-y: hidden;
+    font-size: 20px;
+}
+.txtIniciarsesion{
+    /* display: none; */
+    font-size: 0px;
+}
+.header-iniciar_sesion{
+justify-content: left;
+width:90px;
+height: 30px;
+overflow-y: hidden;
+}
+.header-iniciar_sesion a{
+    font-size: 0px;
+    line-height: 30px;
+}
+.header-menu div{
+    overflow: hidden;
+}
+.image1{
+    display: none;
+    }
+    .main-img_servicios{
+        flex-direction: column;
+    }
+    .main-infrestructura_img{
+        flex-direction: column;
+       }
+       .footer-contacto{
+        flex-direction: column;
+        gap: 1px;
+       }
+       .menu-footer{
+        font-weight: 500;
+        font-size: 15px;
+       }
+       .txt-normal{
+        margin-bottom: 12px;
+       }
     }
