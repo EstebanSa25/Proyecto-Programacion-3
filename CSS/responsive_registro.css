@@ -9,7 +9,9 @@
     width: 45px;
 }
 .sec1-principal{
+    background-image: url('/SVG/Fondo_Responsive.svg');
     width: 100%;
+    height: 200px;
     display: inline-block;
 }
 .registro{
