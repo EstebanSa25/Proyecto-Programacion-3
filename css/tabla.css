@@ -1,0 +1,57 @@
+
+ table { border-width: 0; border-collapse: collapse; border-spacing: 0; }
+ td, th { padding: 0; }
+ .dx-p1 { padding: 1px; }
+ .dx-p2 { padding: 2px; }
+ .dx-p3 { padding: 3px; }
+.tabla_style/*GOD*/
+{
+    border: 1px Solid #e8a3a3;
+    font: 12px Tahoma, Geneva, sans-serif;
+    background-color: #FFFFFF;
+    color: #4F4F4F;
+    cursor: default;
+}
+.tabla_style_tema/*GOD*/
+{
+    background-color: #ffdbdb;
+    color: #4D8AB5;
+}
+
+.tabla_style_tema td/*god*/
+{
+    border: 0px none;
+    vertical-align: middle;
+    border-bottom: 1px Solid #f0aeae;
+    padding: 4px 5px 5px;
+    background-color: inherit;
+}
+
+.header_table/*GOD*/
+{
+    cursor: pointer;
+    white-space: nowrap;
+    padding: 5px;
+    border: 1px Solid #e8a3a3;
+    background: #ffe2e2 url('/DXR.axd?r=0_178-R7ken') repeat-x top;
+    overflow: hidden;
+    font-weight: normal;
+    text-align: left;
+}
+td{
+    width: 100px;
+  justify-content: center;
+  align-items: center;
+}
+
+.tr_row td.identacion_tabla,
+.tr_row td.identacion_tabla,
+.tr_row td.identacion_tabla,
+.tr_row td.identacion_tabla,
+.tr_row td.identacion_tabla
+{
+    background-color: #ffdbdb;
+    border-right: 1px solid #e8a3a3;
+    border-left: 1px solid #e8a3a3;
+    border-top-width: 0px;
+}

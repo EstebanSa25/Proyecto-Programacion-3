@@ -1,0 +1,90 @@
+.Container-lista_compañeros{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+    .lista{
+        justify-content: center;
+        align-items: center;
+    }
+    .justify-content-center{
+        padding: 0;
+        margin:0;
+    }
+ol {
+  display:flex;
+  flex-direction:column;
+  justify-content:center
+}
+    .lista li{
+        counter-increment: my-counter;
+        padding-top: 2rem;
+        padding-bottom: 1rem;
+        display: grid;
+        grid-template-areas: "icon:text";
+        align-items: center;
+    }
+    .lista li:before {
+        content: counter(my-counter);
+        font-weight: bold;
+        background-color: #cdcdcd;
+        border: 3px solid #f5f6f1;
+        border-radius: 50px;
+        font-size: 20px;
+        padding: 0.8rem 1.4rem;
+        color: #fff;
+        margin-left: -2.0rem;
+        margin-right: auto;
+        grid-area: icon;
+    }
+    .card{
+        margin-left: 100px;
+      display:flex;
+        grid-area: text;
+        margin-left: 4rem;
+        border-radius: 0px;
+        box-shadow: 0 0 5px 1px #ddd;
+        margin-top: 0.5rem;
+        width: 500px;
+    }
+   
+ 
+    
+    .card .card-header{
+        background-color: #8abe3e;
+        color: #fff;
+        font-size: 22px;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+      
+    }
+    .btn-success{
+        background-color: #8abe3e;
+        color: #fff;
+        border-color: #8abe3e;
+        border-radius: 0px;
+    }
+    .card-css .card-header, .card-css .btn-success{
+        background-color: #379ad6;
+        border-color: #379ad6;
+    }
+    .card-html .card-header, .card-html .btn-success{
+        background-color: #e65127;
+        border-color: #41241c;
+    }
+    .card-js .card-header, .card-js .btn-success{
+        background-color: #f2bf26;
+        border-color: #f2bf26;
+    }
+    .card-bootstrap .card-header, .card-bootstrap .btn-success{
+        background-color: #7952b3;
+        border-color: #7952b3;
+    }
+    .card-php .card-header, .card-php .btn-success{
+        background-color: #8b92bd;
+        border-color: #8b92bd;
+    }
+.Tittle_section{
+    text-align: center;
+    margin-top: 50px;
+}

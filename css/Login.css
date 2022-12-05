@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body{
+    background-image: url('http://localhost/ProyectoProgramacion3/SVG/pattern.svg');
+    text-decoration: none;
+    display: flex;
+    margin: 0;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+.txt-rojo{
+    color: #FA4747;
+}
+div h3{
+    font: bold normal 14px 'Montserrat', sans-serif;
+}
+.error_login{
+    color: #FA4747;
+    margin: 0;
+    font: 500 normal 20px 'Montserrat', sans-serif;
+}
+.txt-encabezado{
+    font: bold normal 20px 'Montserrat', sans-serif;
+}
+.cuadro-main{
+    display: flex;
+    flex-direction: column;
+    background-color: aqua;
+    width: 616px;
+    height: 500px;
+    background: #FFFFFF;
+    border: 4px solid #C0BEBE;
+    border-radius: 0px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.txt-flex{
+    font: bold normal 14px 'Montserrat', sans-serif;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-left: 20px;
+}
+.form-flex{
+    text-align: center;
+    font: bold normal 20px 'Montserrat', sans-serif;
+    margin: 0;
+    position: relative;
+    top: 9%;
+    gap: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.borde{
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+}
+.btn-enviar{
+    font: bold normal 20px 'Montserrat', sans-serif;
+    color: white;
+    background-color: #FA4747;
+    border: none;
+    height: 35px;
+    width: 100px;
+}
+.btn-enviar:hover{
+    color: black;
+}

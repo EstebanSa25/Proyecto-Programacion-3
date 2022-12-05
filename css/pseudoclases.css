@@ -1,0 +1,32 @@
+.menu:hover{
+    color:#C2C2C2;
+}
+.txtIniciarsesion:hover{
+    color: black;
+}
+[class*="btn-sec1"]:hover{
+color: black;
+}
+.btn-llamar:hover{
+    color: black;
+    border: 3px solid black;
+}
+.menu:hover::checked{
+    color: red;
+}
+.contenedor-li div li:hover {
+    background-color:  #CC3F3F !important;
+}
+.contenedor-li div li:onclick{
+    background-color: aqua;
+}
+.sidebarMenuInner li:hover{
+ background-color: #fd5757;
+}
+.btn-block:hover{
+    background-color: #b63b4d !important;
+}
+.submenu li:hover {
+    background: #b63b4d;
+    color: #FFF;
+  }
