@@ -13,10 +13,25 @@ switch ($metodo) {
 
 function fn_listar_panel_Pago()
 {
+  if (isset($_REQUEST['Id_usuario'])) {
+    $link = mysqli_connect('a2nlmysql19plsk.secureserver.net', 'US', 'US123', 'UH');
+    if (!$link) {
+      echo "error al conectar a mysql";
+      exit();
+    }
+    $sql = "SELECT Email from Usuarios where Id_usuario=" . $_REQUEST['Id_usuario'] . "";
+    $rs = $link->query($sql);
+    $fila = $rs->fetch_assoc();
     $salida = "<div class='checkout-panel'>
     <div class='panel-body'>
       <h2 class='title'>Checkout here!</h2>
-   
+
+      <script type='text/javascript'
+      src='https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js'></script>
+    
+    <script type='text/javascript'>
+      emailjs.init('41wlQajnuUJa9k5qv')
+    </script>
     
    
       <div class='payment-method'>
@@ -68,9 +83,10 @@ function fn_listar_panel_Pago()
       </div>
       
     </div>
-    <button class='btn next-btn' onclick='GETService(`rfs_Factura.php`)'>Pagar</button>
+    <button class='btn next-btn' onclick='Enviar_correo();'>Pagar</button>
   </div>";
-    echo $salida;
+  echo $salida;
+  }
     
 }
 

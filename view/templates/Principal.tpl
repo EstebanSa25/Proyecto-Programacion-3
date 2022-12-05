@@ -17,7 +17,7 @@
     <link rel="stylesheet" href="css/tabla.css">
     <link rel="stylesheet" href="css/Tabla_Horario.css">
     <link rel="stylesheet" href="css/mostrar_compas.css">
-    <link rel="stylesheet" href="css/pago.css">
+
     <script src="js/utils_rsf_alumno_materias_asociar.js"></script>
     <script src="js/utils_rsf_usuarios.js" ></script>
     <script src="js//utils_rsf_Asignatura.js" ></script>
@@ -113,7 +113,7 @@
             <li>
               <div class="link"><i class="fa fa-credit-card"></i>Financiero<i class="fa fa-chevron-down"></i></div>
               <ul class="submenu">
-                <li onclick="GETService('rs_Pagar_Matricula');"><a href="#">Pagar Matricula</a></li>
+                <li onclick="GETService_accion('rsf_Pagar_Matricula.php','?Id_usuario=',{$_Id_usuario});"><a href="#">Pagar Matricula</a></li>
               </ul>
             </li>
             <li>
@@ -340,6 +340,11 @@
           {if $rol eq "1" || $rol eq "2" }
           <script src="//code.tidio.co/c7jyn52rr1u3b1mhke7u4jbxqo84qmjj.js" async></script>
           {/if}
-          
+          <script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<script type="text/javascript">
+  emailjs.init('41wlQajnuUJa9k5qv')
+</script>
 </body>
 </html>

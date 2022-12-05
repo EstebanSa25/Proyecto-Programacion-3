@@ -105,4 +105,34 @@ function insertarEnTidio() {
   document.getElementsByClassName("formInputContainer__textInput ")[1].value="progra123";
   document.getElementsByClassName("formInputContainer__textInput ")[1].click();
 }
+function Enviar_correo(){
+  emailjs.send("service_5qt3fvz","template_0xze3ag",{
+    from_name: "correo_Pureba@gmail.com",
+    Factura_num: "123",
+    Nombre_persona: "Esteban",
+    Metodo_pago: "Paypal",
+    });
+}
+
+$(document).ready(function() {
+ 
+  $('.method').on('click', function() {
+    $('.method').removeClass('blue-border');
+    $(this).addClass('blue-border');
+  });
+ 
+})
+var $cardInput = $('.input-fields input');
+ 
+$('.next-btn').on('click', function(e) {
+ 
+  $cardInput.removeClass('warning');
+ 
+  $cardInput.each(function() {    
+     var $this = $(this);
+     if (!$this.val()) {
+       $this.addClass('warning');
+     }
+  })
+});
 
