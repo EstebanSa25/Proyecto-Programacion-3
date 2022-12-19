@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.2.1, created on 2022-12-19 05:49:41
+/* Smarty version 4.2.1, created on 2022-12-19 23:20:33
   from 'C:\xampp\htdocs\ProyectoProgramacion3\view\templates\Principal.tpl' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.2.1',
-  'unifunc' => 'content_639fed65d17987_14886740',
+  'unifunc' => 'content_63a0e3b12fcfd1_65565420',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'e0e49225780eff8a6f618bd175cd61cf5d6c04f8' => 
     array (
       0 => 'C:\\xampp\\htdocs\\ProyectoProgramacion3\\view\\templates\\Principal.tpl',
-      1 => 1671424637,
+      1 => 1671488425,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_639fed65d17987_14886740 (Smarty_Internal_Template $_smarty_tpl) {
+function content_63a0e3b12fcfd1_65565420 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="es" translate="no">
 <head>
@@ -140,14 +140,26 @@ function content_639fed65d17987_14886740 (Smarty_Internal_Template $_smarty_tpl)
               <li>
                 <div class="link"><i class="fa fa-book"></i>Cursos<i class="fa fa-chevron-down"></i></div>
                 <ul class="submenu">
+                  <?php if ($_smarty_tpl->tpl_vars['rol']->value == "1") {?>
                   <li onclick="ajax_metodos('rsf_Alumno.php?accion=listar_materias_asociar&Id_usuario=','GET',<?php echo $_smarty_tpl->tpl_vars['_Id_usuario']->value;?>
 );"><a href="#">Mis cursos</a></li>
                   <li onclick="ajax_metodos('rsf_Alumno.php?accion=Ver_horario_alumnos&Id_usuario=','GET',<?php echo $_smarty_tpl->tpl_vars['_Id_usuario']->value;?>
-);"><a href="#">Mi horario</a></li>
+);"><a href="#">Mi horarios</a></li>
                   <li onclick="ajax_metodos('rsf_Alumno.php?accion=Ver_companeros_alumnos&Id_usuario=','GET',<?php echo $_smarty_tpl->tpl_vars['_Id_usuario']->value;?>
 )"><a href="#">Mis compañeros</a></li>
                   <li onclick="ajax_metodos('rsf_Alumno.php?accion=Ver_lista_profesores&Id_usuario=','GET',<?php echo $_smarty_tpl->tpl_vars['_Id_usuario']->value;?>
 )"><a href="#">Mis profesores</a></li>
+                  <?php }?>
+                  <?php if ($_smarty_tpl->tpl_vars['rol']->value == "2") {?>
+                  <li onclick="ajax_metodos('rsf_Alumno.php?accion=listar_materias_asociar&Id_usuario=','GET',<?php echo $_smarty_tpl->tpl_vars['_Id_usuario']->value;?>
+);"><a href="#">Los cursos</a></li>
+                  <li onclick="ajax_metodos('rsf_Alumno.php?accion=Ver_horario_alumnos&Id_usuario=','GET',<?php echo $_smarty_tpl->tpl_vars['_Id_usuario']->value;?>
+);"><a href="#">Los horario</a></li>
+                  <li onclick="ajax_metodos('rsf_Alumno.php?accion=Ver_companeros_alumnos&Id_usuario=','GET',<?php echo $_smarty_tpl->tpl_vars['_Id_usuario']->value;?>
+)"><a href="#">Los compañeros</a></li>
+                  <li onclick="ajax_metodos('rsf_Alumno.php?accion=Ver_lista_profesores&Id_usuario=','GET',<?php echo $_smarty_tpl->tpl_vars['_Id_usuario']->value;?>
+)"><a href="#">Los profesores</a></li>
+                  <?php }?>
                 </ul>
               </li>
               
@@ -167,8 +179,14 @@ function content_639fed65d17987_14886740 (Smarty_Internal_Template $_smarty_tpl)
               <li>
                 <div class="link"><i class="fa fa-user"></i>Mi cuenta<i class="fa fa-chevron-down"></i></div>
                 <ul class="submenu">
+                  <?php if ($_smarty_tpl->tpl_vars['rol']->value == "1") {?>
                   <li onclick="GETService_accion('rsf_Todos_los_usuarios.php','?Id_usuario=',<?php echo $_smarty_tpl->tpl_vars['_Id_usuario']->value;?>
 )" ><a href="#">Mis datos personales</a></li>
+                  <?php }?>
+                  <?php if ($_smarty_tpl->tpl_vars['rol']->value == "2") {?>
+                  <li onclick="GETService_accion('rsf_Todos_los_usuarios.php','?Id_usuario=',<?php echo $_smarty_tpl->tpl_vars['_Id_usuario']->value;?>
+)" ><a href="#">Datos personales de mi hij@</a></li>
+                  <?php }?>
                   <li><a href="logoff.php">Cerrar Sesion</a></li>
                 </ul>
               </li>

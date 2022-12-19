@@ -78,13 +78,20 @@
               <li>
                 <div class="link"><i class="fa fa-book"></i>Cursos<i class="fa fa-chevron-down"></i></div>
                 <ul class="submenu">
+                  {if $rol eq "1"}
                   <li onclick="ajax_metodos('rsf_Alumno.php?accion=listar_materias_asociar&Id_usuario=','GET',{$_Id_usuario});"><a href="#">Mis cursos</a></li>
-                  <li onclick="ajax_metodos('rsf_Alumno.php?accion=Ver_horario_alumnos&Id_usuario=','GET',{$_Id_usuario});"><a href="#">Mi horario</a></li>
+                  <li onclick="ajax_metodos('rsf_Alumno.php?accion=Ver_horario_alumnos&Id_usuario=','GET',{$_Id_usuario});"><a href="#">Mi horarios</a></li>
                   <li onclick="ajax_metodos('rsf_Alumno.php?accion=Ver_companeros_alumnos&Id_usuario=','GET',{$_Id_usuario})"><a href="#">Mis compañeros</a></li>
                   <li onclick="ajax_metodos('rsf_Alumno.php?accion=Ver_lista_profesores&Id_usuario=','GET',{$_Id_usuario})"><a href="#">Mis profesores</a></li>
+                  {/if}
+                  {if $rol eq "2"}
+                  <li onclick="ajax_metodos('rsf_Alumno.php?accion=listar_materias_asociar&Id_usuario=','GET',{$_Id_usuario});"><a href="#">Los cursos</a></li>
+                  <li onclick="ajax_metodos('rsf_Alumno.php?accion=Ver_horario_alumnos&Id_usuario=','GET',{$_Id_usuario});"><a href="#">Los horario</a></li>
+                  <li onclick="ajax_metodos('rsf_Alumno.php?accion=Ver_companeros_alumnos&Id_usuario=','GET',{$_Id_usuario})"><a href="#">Los compañeros</a></li>
+                  <li onclick="ajax_metodos('rsf_Alumno.php?accion=Ver_lista_profesores&Id_usuario=','GET',{$_Id_usuario})"><a href="#">Los profesores</a></li>
+                  {/if}
                 </ul>
               </li>
-              
               <li>
                 <div class="link"><i class="fa fa-university"></i>Servicios<i class="fa fa-chevron-down"></i></div>
                 <ul class="submenu">
@@ -100,7 +107,12 @@
               <li>
                 <div class="link"><i class="fa fa-user"></i>Mi cuenta<i class="fa fa-chevron-down"></i></div>
                 <ul class="submenu">
+                  {if $rol eq "1"}
                   <li onclick="GETService_accion('rsf_Todos_los_usuarios.php','?Id_usuario=',{$_Id_usuario})" ><a href="#">Mis datos personales</a></li>
+                  {/if}
+                  {if $rol eq "2"}
+                  <li onclick="GETService_accion('rsf_Todos_los_usuarios.php','?Id_usuario=',{$_Id_usuario})" ><a href="#">Datos personales de mi hij@</a></li>
+                  {/if}
                   <li><a href="logoff.php">Cerrar Sesion</a></li>
                 </ul>
               </li>

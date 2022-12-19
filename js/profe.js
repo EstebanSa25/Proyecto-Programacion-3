@@ -111,3 +111,32 @@ function fn_insertar_asistencia(){
         }
     });
   }
+  function fn_actualizar_promedio(contador,Id_asignatura) {
+    var _Trimestre=$("#Trimestre"+contador).val();
+    var _Nota=$("#Nota"+contador).val();
+    var _Id_nota=$("#_Id_nota"+contador).val();
+    $.ajax({
+        type: "POST",
+        url: urlService+"rsf_Profesor.php?accion=Editar_promedio_alumno"+"&Trimestre="+_Trimestre+"&Nota="+_Nota+"&Id_nota="+_Id_nota,
+        success: function(data) {
+          console.log(data);
+            if(data=="ok"){
+                // $("#contenedor").html('<div class="alert alert-warning" role="alert">Error Borrando registro</div>');
+                _msg=`Se actualizo el promedio correctamente`;
+                $(".modal-backdrop.show").css("display","none");
+                GETService_accion(`rsf_Profesor.php?accion=mostrar_alumnos_promedio`,`&Id_asignatura=`,Id_asignatura);
+                mostrar_alerta_correcto(_msg,1);
+            }else{
+                GETService_accion(`rsf_Profesor.php?accion=mostrar_alumnos_promedio`,`&Id_asignatura=`,Id_asignatura);
+                $("#asistencia").modal("hide");
+                $(".modal-backdrop.show").css("display","none");
+                _msg=`Error actualizando promedio al alumno`;
+                mostrar_alerta_incorrecto(_msg,1);
+            }
+        }, headers: {"Authorization": '121323239'},
+            error: function(error) {
+            // $("#contenedor").html('<div class="alert alert-warning" role="alert">Error Recuperando Datos</div>');
+        }
+    });
+  
+  }

@@ -63,7 +63,7 @@ class model
       $arr_nuevo_usuario[7],
       $arr_nuevo_usuario[8]);";
         if($rol==2){
-            $sql2 = "INSERT INTO Padre values($arr_nuevo_usuario[9],$arr_nuevo_usuario[0]);";
+            $sql2 = "INSERT INTO Padre values($arr_nuevo_usuario[0],$arr_nuevo_usuario[9]);";
             try {
                 if ($this->link->query($sql2) === true) {
                 } else {

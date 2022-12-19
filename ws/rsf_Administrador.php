@@ -383,6 +383,19 @@ function fn_borrar_usuario()
             echo "error al conectar a mysql";
             exit();
         }
+        $sql2 = "select*from Padre;";
+        $rs2 = $link->query($sql2);
+        while ($fila2 = $rs2->fetch_assoc()) {
+            if($fila2['Id_usuario']==$_REQUEST['Id_usuario']){
+            $sql3 = "delete from Padre where Id_usuario=" . $_REQUEST['Id_usuario'];
+            try {
+                if ($link->query($sql3) === true) {
+                } else {
+                }
+            } catch (Exception $e) {
+            }
+            }
+        }
         $sql = "delete from  Usuarios where Id_usuario=" . $_REQUEST['Id_usuario'];
         try {
             if ($link->query($sql) === true) {
@@ -622,7 +635,7 @@ function fn_aprobar_usuario_pendiente()
         $Apellido2 = $_REQUEST['Apellido2'];
         $Telefono = $_REQUEST['Telefono'];
         $Id_rol = $_REQUEST['Id_rol'];
-        $sql = "insert into Usuarios values($Id_usuario,'$Usuario',MD5('uh_$Contraseña'),'$Email','$Nombre','$Apellido1','$Apellido2',$Telefono,$Id_rol)";
+        $sql = "insert into Usuarios values($Id_usuario,'$Usuario','$Contraseña','$Email','$Nombre','$Apellido1','$Apellido2',$Telefono,$Id_rol)";
         try {
             if ($link->query($sql) === true) {
                 echo "ok";
