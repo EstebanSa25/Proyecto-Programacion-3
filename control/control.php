@@ -152,8 +152,12 @@ class control
             $arr_nuevo_usuario[6] = $apellido2;
             $arr_nuevo_usuario[7] = $telefono;
             $arr_nuevo_usuario[8] = $rol;
+            if($rol==2){
+                $cedulaHijo = $_REQUEST['nombre_hijo'];
+                $arr_nuevo_usuario[9] = $cedulaHijo;
+            }
 
-            $rs = $this->ins_model->setUsuario($arr_nuevo_usuario);
+            $rs = $this->ins_model->setUsuario($arr_nuevo_usuario,$rol);
             $this->insView->setAssign("msg", " ");
 
             if ($rs == "ok") {

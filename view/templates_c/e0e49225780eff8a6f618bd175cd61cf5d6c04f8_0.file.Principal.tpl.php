@@ -1,4 +1,27 @@
-<!DOCTYPE html>
+<?php
+/* Smarty version 4.2.1, created on 2022-12-19 05:49:41
+  from 'C:\xampp\htdocs\ProyectoProgramacion3\view\templates\Principal.tpl' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '4.2.1',
+  'unifunc' => 'content_639fed65d17987_14886740',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    'e0e49225780eff8a6f618bd175cd61cf5d6c04f8' => 
+    array (
+      0 => 'C:\\xampp\\htdocs\\ProyectoProgramacion3\\view\\templates\\Principal.tpl',
+      1 => 1671424637,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_639fed65d17987_14886740 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 <html lang="es" translate="no">
 <head>
     <meta charset="UTF-8">
@@ -10,38 +33,71 @@
 
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <?php echo '<script'; ?>
+ src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"><?php echo '</script'; ?>
+>
     <link rel="stylesheet" href="css/Principal_accion.css">
     <link rel="stylesheet" href="css/pseudoclases.css">
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js" ></script>
+    <?php echo '<script'; ?>
+ src="https://code.jquery.com/jquery-3.6.1.min.js" ><?php echo '</script'; ?>
+>
     <link rel="stylesheet" href="css/animation.css">
     <link rel="stylesheet" href="css/tabla.css">
     <link rel="stylesheet" href="css/Tabla_Horario.css">
     <link rel="stylesheet" href="css/mostrar_compas.css">
-    <script src="js/utils_rsf_alumno_materias_asociar.js"></script>
-    <script src="js/utils_rsf_usuarios.js" ></script>
-    <script src="js/utils_rsf_Asignatura.js" ></script>
-    <script src="js/utils_rsf_aprobar_cuenta.js" ></script>
-    <script src="js/Config_ws.js"></script>
-    <script src="js/rsf_Companeros_clase.js"></script>
-    <script src="js/modal.js"></script>
-    <script src="js/eliminar_postback.js"></script>
-    <script src="js/profe.js"></script>
-    <script src="js/utils_rsf_alumno_datos_personales.js"></script>
+    <?php echo '<script'; ?>
+ src="js/utils_rsf_alumno_materias_asociar.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="js/utils_rsf_usuarios.js" ><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="js/utils_rsf_Asignatura.js" ><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="js/utils_rsf_aprobar_cuenta.js" ><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="js/Config_ws.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="js/rsf_Companeros_clase.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="js/modal.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="js/eliminar_postback.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="js/profe.js"><?php echo '</script'; ?>
+>
+    <?php echo '<script'; ?>
+ src="js/utils_rsf_alumno_datos_personales.js"><?php echo '</script'; ?>
+>
     <link rel="stylesheet" href="css/timeline.css">
-    <script type="text/javascript"
+    <?php echo '<script'; ?>
+ type="text/javascript"
     
-  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-  <script src="js/rsf_Matricular_alumno.js"></script>
-<script src="js/profe.js"></script>
-<script type="text/javascript">
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"><?php echo '</script'; ?>
+>
+  <?php echo '<script'; ?>
+ src="js/rsf_Matricular_alumno.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ src="js/profe.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ type="text/javascript">
   emailjs.init('41wlQajnuUJa9k5qv')
-</script>
+<?php echo '</script'; ?>
+>
 <link rel="stylesheet" href="css/Pago.css">
 </head>
 <body class="notranslate">
   <input type="hidden" name="accion" value="Principal">
-   <p id="_Id_rol" hidden>{$_Id_usuario}</p>
+   <p id="_Id_rol" hidden><?php echo $_smarty_tpl->tpl_vars['_Id_usuario']->value;?>
+</p>
     <input type="hidden" name="accion" value="menu_principal">
 
         <div class="Contendor-principal">
@@ -59,29 +115,39 @@
                       rol 3=profe
                       rol 4=administrador
                 -->
-                {if $rol eq "1"}
-                <li>{$_nombre}<span>Alumno</span></li>
-                <h1><?php echo "This message is from server side."?></h1>
-                {/if}
-                {if $rol eq "2"}
-                <li>{$_nombre}<span>Encargado</span></li>
-                {/if}
-                {if $rol eq "3"}
-                <li>{$_nombre}<span>Profesor</span></li>
-                {/if}
-                {if $rol eq "4"}
-                <li>{$_nombre}<span>Administrador</span></li>
-                {/if}
+                <?php if ($_smarty_tpl->tpl_vars['rol']->value == "1") {?>
+                <li><?php echo $_smarty_tpl->tpl_vars['_nombre']->value;?>
+<span>Alumno</span></li>
+                <h1><?php echo '<?php'; ?>
+ echo "This message is from server side."<?php echo '?>'; ?>
+</h1>
+                <?php }?>
+                <?php if ($_smarty_tpl->tpl_vars['rol']->value == "2") {?>
+                <li><?php echo $_smarty_tpl->tpl_vars['_nombre']->value;?>
+<span>Encargado</span></li>
+                <?php }?>
+                <?php if ($_smarty_tpl->tpl_vars['rol']->value == "3") {?>
+                <li><?php echo $_smarty_tpl->tpl_vars['_nombre']->value;?>
+<span>Profesor</span></li>
+                <?php }?>
+                <?php if ($_smarty_tpl->tpl_vars['rol']->value == "4") {?>
+                <li><?php echo $_smarty_tpl->tpl_vars['_nombre']->value;?>
+<span>Administrador</span></li>
+                <?php }?>
               </ul>
                 <ul id="accordion" class="accordion">
-            {if $rol eq "1"|| $rol eq "2"}
+            <?php if ($_smarty_tpl->tpl_vars['rol']->value == "1" || $_smarty_tpl->tpl_vars['rol']->value == "2") {?>
               <li>
                 <div class="link"><i class="fa fa-book"></i>Cursos<i class="fa fa-chevron-down"></i></div>
                 <ul class="submenu">
-                  <li onclick="ajax_metodos('rsf_Alumno.php?accion=listar_materias_asociar&Id_usuario=','GET',{$_Id_usuario});"><a href="#">Mis cursos</a></li>
-                  <li onclick="ajax_metodos('rsf_Alumno.php?accion=Ver_horario_alumnos&Id_usuario=','GET',{$_Id_usuario});"><a href="#">Mi horario</a></li>
-                  <li onclick="ajax_metodos('rsf_Alumno.php?accion=Ver_companeros_alumnos&Id_usuario=','GET',{$_Id_usuario})"><a href="#">Mis compañeros</a></li>
-                  <li onclick="ajax_metodos('rsf_Alumno.php?accion=Ver_lista_profesores&Id_usuario=','GET',{$_Id_usuario})"><a href="#">Mis profesores</a></li>
+                  <li onclick="ajax_metodos('rsf_Alumno.php?accion=listar_materias_asociar&Id_usuario=','GET',<?php echo $_smarty_tpl->tpl_vars['_Id_usuario']->value;?>
+);"><a href="#">Mis cursos</a></li>
+                  <li onclick="ajax_metodos('rsf_Alumno.php?accion=Ver_horario_alumnos&Id_usuario=','GET',<?php echo $_smarty_tpl->tpl_vars['_Id_usuario']->value;?>
+);"><a href="#">Mi horario</a></li>
+                  <li onclick="ajax_metodos('rsf_Alumno.php?accion=Ver_companeros_alumnos&Id_usuario=','GET',<?php echo $_smarty_tpl->tpl_vars['_Id_usuario']->value;?>
+)"><a href="#">Mis compañeros</a></li>
+                  <li onclick="ajax_metodos('rsf_Alumno.php?accion=Ver_lista_profesores&Id_usuario=','GET',<?php echo $_smarty_tpl->tpl_vars['_Id_usuario']->value;?>
+)"><a href="#">Mis profesores</a></li>
                 </ul>
               </li>
               
@@ -94,28 +160,34 @@
               <li>
                 <div class="link"><i class="fa fa-credit-card"></i>Financiero<i class="fa fa-chevron-down"></i></div>
                 <ul class="submenu">
-                  <li onclick="ajax_metodos('rsf_Alumno.php?accion=Pagar_matricula&Id_usuario=','GET',{$_Id_usuario});"><a href="#">Pagar Matricula</a></li>
+                  <li onclick="ajax_metodos('rsf_Alumno.php?accion=Pagar_matricula&Id_usuario=','GET',<?php echo $_smarty_tpl->tpl_vars['_Id_usuario']->value;?>
+);"><a href="#">Pagar Matricula</a></li>
                 </ul>
               </li>
               <li>
                 <div class="link"><i class="fa fa-user"></i>Mi cuenta<i class="fa fa-chevron-down"></i></div>
                 <ul class="submenu">
-                  <li onclick="GETService_accion('rsf_Todos_los_usuarios.php','?Id_usuario=',{$_Id_usuario})" ><a href="#">Mis datos personales</a></li>
+                  <li onclick="GETService_accion('rsf_Todos_los_usuarios.php','?Id_usuario=',<?php echo $_smarty_tpl->tpl_vars['_Id_usuario']->value;?>
+)" ><a href="#">Mis datos personales</a></li>
                   <li><a href="logoff.php">Cerrar Sesion</a></li>
                 </ul>
               </li>
             
-            {/if}
+            <?php }?>
             <!-- profesor -->
-            {if $rol eq "3"}
+            <?php if ($_smarty_tpl->tpl_vars['rol']->value == "3") {?>
             <li>
               <div class="link"><i class="fa fa-book"></i>Asignaturas<i class="fa fa-chevron-down"></i></div>
               <ul class="submenu">
-                <input type="hidden" id="Id_profesor_ws" value="{$_Id_usuario}">
+                <input type="hidden" id="Id_profesor_ws" value="<?php echo $_smarty_tpl->tpl_vars['_Id_usuario']->value;?>
+">
                
-                <li onclick='ajax_metodos("rsf_Profesor.php?accion=Colocar_asistencia&Id_usuario=","GET",{$_Id_usuario});'><a href="#">Colocar asistencia</a></li>
-                <li onclick="ajax_metodos('rsf_Profesor.php?accion=Colocar_promedios&Id_usuario=','GET',{$_Id_usuario});"><a href="#">Ingresar promedios</a></li>
-                <li onclick="ajax_metodos('rsf_Profesor.php?accion=Mostrar_todos_mis_alumnos&Id_usuario=','GET',{$_Id_usuario});"><a href="#">Ver mis estudiantes</a></li>
+                <li onclick='ajax_metodos("rsf_Profesor.php?accion=Colocar_asistencia&Id_usuario=","GET",<?php echo $_smarty_tpl->tpl_vars['_Id_usuario']->value;?>
+);'><a href="#">Colocar asistencia</a></li>
+                <li onclick="ajax_metodos('rsf_Profesor.php?accion=Colocar_promedios&Id_usuario=','GET',<?php echo $_smarty_tpl->tpl_vars['_Id_usuario']->value;?>
+);"><a href="#">Ingresar promedios</a></li>
+                <li onclick="ajax_metodos('rsf_Profesor.php?accion=Mostrar_todos_mis_alumnos&Id_usuario=','GET',<?php echo $_smarty_tpl->tpl_vars['_Id_usuario']->value;?>
+);"><a href="#">Ver mis estudiantes</a></li>
               </ul>
             </li>
             <li>
@@ -128,15 +200,16 @@
             <li>
               <div class="link"><i class="fa fa-user"></i>Mi cuenta<i class="fa fa-chevron-down"></i></div>
               <ul class="submenu">
-                <li onclick="GETService_accion('rsf_Todos_los_usuarios.php','?Id_usuario=',{$_Id_usuario})" ><a href="#">Mis datos personales</a></li>
+                <li onclick="GETService_accion('rsf_Todos_los_usuarios.php','?Id_usuario=',<?php echo $_smarty_tpl->tpl_vars['_Id_usuario']->value;?>
+)" ><a href="#">Mis datos personales</a></li>
                 <li><a href="logoff.php">Cerrar Sesion</a></li>
               </ul>
             </li>
-            {/if}
+            <?php }?>
             <!-- profesor -->
 
             <!-- administrador -->
-            {if $rol eq "4"}
+            <?php if ($_smarty_tpl->tpl_vars['rol']->value == "4") {?>
             <li>
               <div class="link"><i class="fa fa-book"></i>Asignaturas<i class="fa fa-chevron-down"></i></div>
               <ul class="submenu">
@@ -160,7 +233,8 @@
             <li>
               <div class="link"><i class="fa fa-user"></i>Mi cuenta<i class="fa fa-chevron-down"></i></div>
               <ul class="submenu">
-                <li onclick="GETService_accion('rsf_Todos_los_usuarios.php','?Id_usuario=',{$_Id_usuario})" ><a href="#">Mis datos personales</a></li>
+                <li onclick="GETService_accion('rsf_Todos_los_usuarios.php','?Id_usuario=',<?php echo $_smarty_tpl->tpl_vars['_Id_usuario']->value;?>
+)" ><a href="#">Mis datos personales</a></li>
                 <li><a href="logoff.php">Cerrar Sesion</a></li>
               </ul>
             </li>
@@ -169,7 +243,7 @@
                 <a href="#" onclick="GETService('rsf_usuarios.php')" ><li>Usuario</li></a>
                 <a href="#"onclick="GETService('rsf_aprobar_cuenta.php');" ><li>Aprobar registro de cuenta</li></a> -->
                
-            {/if}
+            <?php }?>
         </ul>
           </div>
             <div id='center' class="main center">
@@ -348,10 +422,13 @@
          
           <!-- Modal matricular a alumno -->
           <!--  -->
-          {if $rol eq "1" || $rol eq "2" }
-          <script src="//code.tidio.co/c7jyn52rr1u3b1mhke7u4jbxqo84qmjj.js" async></script>
-          {/if}
+          <?php if ($_smarty_tpl->tpl_vars['rol']->value == "1" || $_smarty_tpl->tpl_vars['rol']->value == "2") {?>
+          <?php echo '<script'; ?>
+ src="//code.tidio.co/c7jyn52rr1u3b1mhke7u4jbxqo84qmjj.js" async><?php echo '</script'; ?>
+>
+          <?php }?>
         
          
 </body>
-</html>
+</html><?php }
+}

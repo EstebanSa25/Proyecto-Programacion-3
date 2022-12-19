@@ -20,13 +20,22 @@ class model
         $datos = []; // esto sera mi matriz
 
         while ($fila = $rs->fetch_assoc()) {
-            $datos['Id_usuario'] = $fila['Id_usuario'];
+            if($fila['Id_rol']==2){
+                $sql2 = "select*from Padre;";
+                $rs2 = $this->link->query($sql2);
+                while ($fila2 = $rs2->fetch_assoc()){
+                    $datos['Id_usuario'] = $fila2['Id_Padre'];
+                }
+            }else{
+                $datos['Id_usuario'] = $fila['Id_usuario'];
+            }
             $datos['Email'] = $fila['Email'];
             $datos['Nombre'] = $fila['Nombre'];
             $datos['Apellido1'] = $fila['Apellido1'];
             $datos['Apellido2'] = $fila['Apellido2'];
             $datos['Telefono'] = $fila['Telefono'];
             $datos['Id_rol'] = $fila['Id_rol'];
+           
         }
 
         $this->ins_conn->desconectar(); // puede q esto lo tengas q modificar!!!
@@ -39,7 +48,7 @@ class model
         //read
         // 'MD5('uh_$arr_nuevo_usuario[2]'),
     }
-    public function setUsuario($arr_nuevo_usuario)
+    public function setUsuario($arr_nuevo_usuario,$rol)
     {
         //create
         $this->link = $this->ins_conn->conectar();
@@ -53,7 +62,15 @@ class model
         '$arr_nuevo_usuario[6]',
       $arr_nuevo_usuario[7],
       $arr_nuevo_usuario[8]);";
-        // print_r($sql);
+        if($rol==2){
+            $sql2 = "INSERT INTO Padre values($arr_nuevo_usuario[9],$arr_nuevo_usuario[0]);";
+            try {
+                if ($this->link->query($sql2) === true) {
+                } else {
+                }
+            } catch (Exception $e) {
+            }
+        }
 
         try {
             if ($this->link->query($sql) === true) {

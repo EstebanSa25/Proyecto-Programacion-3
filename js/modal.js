@@ -98,41 +98,34 @@ $(function() {
 });
 
 //Tidio
-function insertarEnTidio() {
-  document.getElementsByClassName("formInputContainer__textInput ")[0].click();
-  $('.formInputContainer__textInput formInputContainer__textInput--invalid').attr('id', 'Email');
-  document.getElementsByClassName("formInputContainer__textInput ")[1].click();
-  document.getElementsByClassName("formInputContainer__textInput ")[1].value="progra123";
-  document.getElementsByClassName("formInputContainer__textInput ")[1].click();
-}
-function Enviar_correo(){
-  emailjs.send("service_5qt3fvz","template_0xze3ag",{
-    from_name: "correo_Pureba@gmail.com",
-    Factura_num: "123",
-    Nombre_persona: "Esteban",
-    Metodo_pago: "Paypal",
+function Enviar_correo(Email,Id_factura,Nombre){
+  alert("lo estoy intentando");
+  emailjs.send("service_5qt3fvz","template_dguwkln",{
+    from_name: Email,
+    Factura_num: Id_factura,
+    Nombre_persona: Nombre,
     });
+    
 }
 
-$(document).ready(function() {
- 
-  $('.method').on('click', function() {
-    $('.method').removeClass('blue-border');
-    $(this).addClass('blue-border');
-  });
- 
-})
-var $cardInput = $('.input-fields input');
- 
-$('.next-btn').on('click', function(e) {
- 
-  $cardInput.removeClass('warning');
- 
-  $cardInput.each(function() {    
-     var $this = $(this);
-     if (!$this.val()) {
-       $this.addClass('warning');
-     }
-  })
-});
+function ActualizarCorreo(){
+  $("#Nombre_datos_label").attr('hidden',true);
+  $("#Nombre_datos").attr('hidden',true);
 
+  $("#Apellido1_datos_label").attr('hidden',true);
+  $("#Apellido1_datos").attr('hidden',true);
+
+  $("#Apellido2_datos_label").attr('hidden',true);
+  $("#Apellido2_datos").attr('hidden',true);
+
+  $("#Usuario_datos_label").attr('hidden',true);
+  $("#Usuario_datos").attr('hidden',true);
+
+  $("#Telefono_datos_label").attr('hidden',true);
+  $("#Telefono_datos").attr('hidden',true);
+
+  $("#Id_usuario_datos_label").attr('hidden',true);
+  $("#Id_usuario_datos").attr('hidden',true);
+  $("#Email_datos").attr("readonly", false);
+  $("#btn-correo").attr("hidden", false);
+}
